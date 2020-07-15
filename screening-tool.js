@@ -85,6 +85,7 @@ function opiatesTestProcess(){
     else if (document.getElementById("opiatesTestPositive").value == true){
     opiatesTestResult = "Positive";   
     }
+    opiatesTestExplanation = "";
 
     if (opiatesTestResult == "Positive"){
         if(drugs.includes("Codeine") || drugs.includes("Morphine") || drugs.includes("Oxycodone") || drugs.includes("Heroin-mam6") || drugs.includes("Hydromorphone") || drugs.includes("Hydrocodone") ){
@@ -360,6 +361,7 @@ function drugsProcess(){
 function interpret() {
     drugs = [];
     output = "";
+    opiatesTestExplanation = "";
     // 1. Make sure that both tests have been run
         // if they haven't, say in RED - "Please select a result for opiates and oxycodone test. If you need to review test/drug interactions, please refer to What is an opiates screening test?"
     if(document.getElementById("opiatesTestNegative").value == undefined || document.getElementById("oxycodoneTestNegative").value == undefined){
