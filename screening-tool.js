@@ -378,10 +378,10 @@ function interpret() {
     <p><strong>How do I interpret the results of the UDT?</strong></p>
     <div class="w-layout-grid grid-10">
         <div>
-        <div class="text-block-22">Results</div>
+        <div class="text-block-34-1">Results</div>
         </div>
-        <div class="text-block-23">Interpretation</div>
-        <div class="text-block-24">Explanation</div>
+        <div class="text-block-34-1">Interpretation</div>
+        <div class="text-block-34-1">Explanation</div>
         <div class="text-block-34">Opiates Test: ${opiatesTestResult}</div>
         <div class="text-block-34">${opiatesTestInterpretation}</div>
         <div class="text-block-34">${opiatesTestExplanation}</div>
