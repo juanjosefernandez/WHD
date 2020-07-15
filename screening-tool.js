@@ -110,13 +110,19 @@ function opiatesTestProcess(){
             // build string
             var nonOpiates = "";
             if (drugs.includes("Hydromorphone")){
-            nonOpiates = nonOpiates + "Hydromorphone, "
+            nonOpiates = nonOpiates + "Hydromorphone"
             }
             if (drugs.includes("Hydrocodone")){
-            nonOpiates = nonOpiates + "Hydrocodone, "
+            if (nonOpiates.length > 0){
+                nonOpiates+= ", ";
+            }
+            nonOpiates = nonOpiates + "Hydrocodone"
             }
             if (drugs.includes("Oxycodone")){
-            nonOpiates = nonOpiates + "Oxycodone, "
+            if (nonOpiates.length > 0){
+                nonOpiates+= ", ";
+            }
+            nonOpiates = nonOpiates + "Oxycodone"
             }
             opiatesTestExplanation = `High dose or recent ${nonOpiates}, this can give a positive Opiates Test.`;
         }
@@ -150,19 +156,19 @@ function opiatesTestProcess(){
             // build string
             var nonOpiates = "";
             if (drugs.includes("Hydromorphone")){
-            nonpOpieates = nonOpiates + "Hydromorphone"
+                nonOpiates = nonOpiates + "Hydromorphone"
             }
             if (drugs.includes("Hydrocodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonpOpieates = nonOpiates + "Hydrocodone"
+            nonOpiates = nonOpiates + "Hydrocodone"
             }
             if (drugs.includes("Oxycodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonpOpieates = nonOpiates + "Oxycodone"
+            nonOpiates = nonOpiates + "Oxycodone"
             }
             opiatesTestExplanation = `Low dose or distant dosing of ${nonOpiates}, this can give a positive Opiates Test.`;
         }
