@@ -391,11 +391,11 @@ function interpret() {
     </div>
     <p><strong> What tests should I order to look for the drugs my patient is taking? </strong></p>
     <div class="w-layout-grid grid-11">
-        <div class="text-block-25">Medications/<br/>Drugs taken</div>
-        <div class="text-block-26">Test Recommended</div>
-        <div class="text-block-27">Interpretation</div>
-        <div class="text-block-28">Explanation</div>
-        <div class="text-block-29">False Positives</div>
+        <div class="text-block-34-1">Medications/<br/>Drugs taken</div>
+        <div class="text-block-34-1">Test Recommended</div>
+        <div class="text-block-34-1">Interpretation</div>
+        <div class="text-block-34-1">Explanation</div>
+        <div class="text-block-34-1">False Positives</div>
     </div>
     ${output}
     </div>` 
