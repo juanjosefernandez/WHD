@@ -110,13 +110,13 @@ function opiatesTestProcess(){
             // build string
             var nonOpiates = "";
             if (drugs.includes("Hydromorphone")){
-            nonpOpieates = nonOpiates + "Hydromorphone, "
+            nonOpiates = nonOpiates + "Hydromorphone, "
             }
             if (drugs.includes("Hydrocodone")){
-            nonpOpieates = nonOpiates + "Hydrocodone, "
+            nonOpiates = nonOpiates + "Hydrocodone, "
             }
             if (drugs.includes("Oxycodone")){
-            nonpOpieates = nonOpiates + "Oxycodone, "
+            nonOpiates = nonOpiates + "Oxycodone, "
             }
             opiatesTestExplanation = `High dose or recent ${nonOpiates}, this can give a positive Opiates Test.`;
         }
