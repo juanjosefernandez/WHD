@@ -346,7 +346,7 @@ function drugsProcess(){
     }
     
     // add to output
-    output = output + `<div class="w-layout-grid grid-11">
+    output = output + `<div class="w-layout-grid grid-3-JF">
         <div class="text-block-34">${drugName}</div>
         <div class="text-block-34">${testRecommended}</div>
         <div class="text-block-34">${interpretation}</div>
@@ -384,7 +384,7 @@ function interpret() {
 
     document.getElementById('result').innerHTML = `<div>
     <p><strong>How do I interpret the results of the UDT?</strong></p>
-    <div class="w-layout-grid grid-17-JF">
+    <div class="w-layout-grid grid-1-JF">
         <div>
         <div class="text-block-34-1">Results</div>
         </div>
@@ -398,7 +398,7 @@ function interpret() {
         <div class="text-block-34">${oxycodoneTestExplanation}</div>
     </div>
     <p><strong> What tests should I order to look for the drugs my patient is taking? </strong></p>
-    <div class="w-layout-grid grid-11">
+    <div class="w-layout-grid grid-3-JF">
         <div class="text-block-34-1">Medications/<br/>Drugs taken</div>
         <div class="text-block-34-1">Test Recommended</div>
         <div class="text-block-34-1">Interpretation</div>
