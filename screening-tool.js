@@ -384,7 +384,7 @@ function interpret() {
 
     document.getElementById('result').innerHTML = `<div>
     <p><strong>How do I interpret the results of the UDT?</strong></p>
-    <div class="w-layout-grid grid-10">
+    <div class="w-layout-grid grid-17-JF">
         <div>
         <div class="text-block-34-1">Results</div>
         </div>
