@@ -402,7 +402,7 @@ function interpret() {
         <div class="text-block-34 banner-JF">Interpretation</div>
         <div class="text-block-34 banner-JF">Explanation</div>
         <div class="text-block-34 banner-JF">False Positives</div>
+        ${output}
     </div>
-    ${output}
     </div>` 
 }
