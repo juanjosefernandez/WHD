@@ -386,10 +386,10 @@ function interpret() {
     <p><strong>How do I interpret the results of the UDT?</strong></p>
     <div class="w-layout-grid grid-1-JF">
         <div>
-        <div class="text-block-34-1 banner-JF">Results</div>
+        <div class="text-block-34 banner-JF">Results</div>
         </div>
-        <div class="text-block-34-1 banner-JF">Interpretation</div>
-        <div class="text-block-34-1 banner-JF">Explanation</div>
+        <div class="text-block-34 banner-JF">Interpretation</div>
+        <div class="text-block-34 banner-JF">Explanation</div>
         <div class="text-block-34">Opiates Test: ${opiatesTestResult}</div>
         <div class="text-block-34">${opiatesTestInterpretation}</div>
         <div class="text-block-34">${opiatesTestExplanation}</div>
@@ -399,11 +399,11 @@ function interpret() {
     </div>
     <p><strong> What tests should I order to look for the drugs my patient is taking? </strong></p>
     <div class="w-layout-grid grid-3-JF banner-JF">
-        <div class="text-block-34-1">Medications/<br/>Drugs taken</div>
-        <div class="text-block-34-1">Test Recommended</div>
-        <div class="text-block-34-1">Interpretation</div>
-        <div class="text-block-34-1">Explanation</div>
-        <div class="text-block-34-1">False Positives</div>
+        <div class="text-block-34">Medications/<br/>Drugs taken</div>
+        <div class="text-block-34">Test Recommended</div>
+        <div class="text-block-34">Interpretation</div>
+        <div class="text-block-34">Explanation</div>
+        <div class="text-block-34">False Positives</div>
     </div>
     ${output}
     </div>` 
