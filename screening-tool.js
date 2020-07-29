@@ -346,13 +346,11 @@ function drugsProcess(){
     }
     
     // add to output
-    output = output + `<div class="w-layout-grid grid-3-JF">
-        <div class="text-block-34">${drugName}</div>
+    output = output + `<div class="text-block-34">${drugName}</div>
         <div class="text-block-34">${testRecommended}</div>
         <div class="text-block-34">${interpretation}</div>
         <div class="text-block-34">${explanation}</div>
-        <div class="text-block-34">${falsePositives}</div>
-    </div>`;
+        <div class="text-block-34">${falsePositives}</div>`;
     }
 }
 
