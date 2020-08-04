@@ -228,8 +228,8 @@ function drugsProcess(){
     if (drugs[index]=="Buprenorphine"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Buprenorphine.";
-        interpretation = "Expected But Uninterpretable.";
-        explanation = "Cannot determine if patient is or is not taking Buprenorphine, Buprenorphine not detected by Opiates or Oxycodone screening tests";
+        interpretation = "Expected but uninterpretable.";
+        explanation = "Cannot determine if patient is or is not taking Buprenorphine, Buprenorphine not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Codeine"){
@@ -237,24 +237,24 @@ function drugsProcess(){
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Expected";
-        explanation = "Patient taking Codeine, highly likely that Opiate test would be positive";
+        explanation = "Patient taking Codeine, highly likely that Opiate test would be positive.";
         } 
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking Codeine, highly unlikely that Opiate test would be negative";
+        explanation = "Patient taking Codeine, highly unlikely that Opiate test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Fentanyl"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Fentanyl.";
-        interpretation = "Expected But Uninterpretable.";
-        explanation = "Cannot determine if patient is or is not taking Fentanyl, Fentanyl not detected by Opiates or Oxycodone screening tests";
+        interpretation = "Expected but uninterpretable.";
+        explanation = "Cannot determine if patient is or is not taking Fentanyl, Fentanyl not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Hydrocodone"){
         drugName = drugs[index];
-        testRecommended = "Opiates is appropriate test";
+        testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Possible";
         explanation = "High dose or recent Hydrocodone can give a positive Opiates Test.";
@@ -267,7 +267,7 @@ function drugsProcess(){
     }
     if (drugs[index]=="Hydromorphone"){
         drugName = drugs[index];
-        testRecommended = "Opiates is appropriate test";
+        testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Possible";
         explanation = "High dose or recent Hydromorphone can give a positive Opiates Test.";
@@ -280,7 +280,7 @@ function drugsProcess(){
     }
     if (drugs[index]=="Heroin-mam6"){
         drugName = "Heroin";
-        testRecommended = "Opiates is appropriate test";
+        testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Expected";
         explanation = "Patient taking heroin, highly likely that Opiate test would be positive.";
@@ -294,14 +294,14 @@ function drugsProcess(){
     if (drugs[index]=="Meperidine"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Meperidine.";
-        interpretation = "Expected But Uninterpretable.";
+        interpretation = "Expected but uninterpretable.";
         explanation = "Cannot determine if patient is or is not taking Meperidine, Meperidine not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Methadone"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Methadone.";
-        interpretation = "Expected But Uninterpretable.";
+        interpretation = "Expected but uninterpretable.";
         explanation = "Cannot determine if patient is or is not taking Methadone, Methadone not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
