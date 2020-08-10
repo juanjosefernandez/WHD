@@ -228,11 +228,13 @@ function drugsProcess(){
     if (drugs[index]=="Buprenorphine"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Buprenorphine.";
-//         if (){
-//         }
-//         else {
-//         }
-        interpretation = "Unexpected";
+        if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
+            interpretation = "Unexpected";
+        }
+        else {
+            interpretation = "Unexpected";
+        }
+//         interpretation = "Unexpected";
         explanation = "Cannot determine if patient is or is not taking Buprenorphine, Buprenorphine not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
@@ -252,7 +254,12 @@ function drugsProcess(){
     if (drugs[index]=="Fentanyl"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Fentanyl.";
-        interpretation = "Unexpected";
+        if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
+            interpretation = "Unexpected";
+        }
+        else {
+            interpretation = "Unexpected";
+        }
         explanation = "Cannot determine if patient is or is not taking Fentanyl, Fentanyl not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
@@ -298,14 +305,24 @@ function drugsProcess(){
     if (drugs[index]=="Meperidine"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Meperidine.";
-        interpretation = "Unexpected";
+        if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
+            interpretation = "Unexpected";
+        }
+        else {
+            interpretation = "Unexpected";
+        }
         explanation = "Cannot determine if patient is or is not taking Meperidine, Meperidine not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Methadone"){
         drugName = drugs[index];
         testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Methadone.";
-        interpretation = "Unexpected";
+        if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
+            interpretation = "Unexpected";
+        }
+        else {
+            interpretation = "Unexpected";
+        }
         explanation = "Cannot determine if patient is or is not taking Methadone, Methadone not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
