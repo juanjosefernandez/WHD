@@ -387,10 +387,10 @@ function drugsProcess(){
     
     // add to output
     output = output + `<div class="text-block-34">${drugName}</div>
-        <div class="text-block-34">${testRecommended}</div>
-        <div class="text-block-34">${interpretation}</div>
-        <div class="text-block-34">${explanation}</div>
-        <div class="text-block-34">${falsePositives}</div>`;
+        <div class="text-block-34 shaded">${testRecommended}</div>
+        <div class="text-block-34 shaded">${interpretation}</div>
+        <div class="text-block-34 shaded">${explanation}</div>
+        <div class="text-block-34 shaded">${falsePositives}</div>`;
     }
 }
 
@@ -423,17 +423,15 @@ function interpret() {
     document.getElementById('result').innerHTML = `<div>
     <p><strong>How do I interpret the results of the UDT?</strong></p>
     <div class="w-layout-grid grid-1-JF">
-        <div>
         <div class="text-block-34 banner-JF">Results</div>
-        </div>
         <div class="text-block-34 banner-JF">Interpretation</div>
         <div class="text-block-34 banner-JF">Explanation</div>
-        <div class="text-block-34">Opiates Test: ${opiatesTestResult}</div>
-        <div class="text-block-34">${opiatesTestInterpretation}</div>
-        <div class="text-block-34">${opiatesTestExplanation}</div>
-        <div class="text-block-34">Oxycodone Test: ${oxycodoneTestResult}</div>
-        <div class="text-block-34">${oxycodoneTestInterpretation}</div>
-        <div class="text-block-34">${oxycodoneTestExplanation}</div>
+        <div class="text-block-34 shaded">Opiates Test: ${opiatesTestResult}</div>
+        <div class="text-block-34 shaded">${opiatesTestInterpretation}</div>
+        <div class="text-block-34 shaded">${opiatesTestExplanation}</div>
+        <div class="text-block-34 shaded">Oxycodone Test: ${oxycodoneTestResult}</div>
+        <div class="text-block-34 shaded">${oxycodoneTestInterpretation}</div>
+        <div class="text-block-34 shaded">${oxycodoneTestExplanation}</div>
     </div>
     <p><strong> What tests should I order to look for the drugs my patient is taking? </strong></p>
     <div class="w-layout-grid grid-3-JF">
