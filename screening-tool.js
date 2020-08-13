@@ -372,7 +372,7 @@ function drugsProcess(){
         testRecommended = "Oxycodone is the appropriate test.";
         if (oxycodoneTestResult=="Positive"){
             interpretation = "Expected";
-            explanation = "Patient taking Oxymorphone, highly likely Oxycodone test and/or Opiates test would be positive.\nPossible high dose or recent Oxymorphone can also give a positive Opiates Test.";
+            explanation = "Patient taking <b>Oxymorphone</b>, highly likely Oxycodone test and/or Opiates test would be positive.\nPossible high dose or recent <b>Oxymorphone</b> can also give a positive Opiates Test.";
         } 
         else if(opiatesTestResult=="Positive"){
             interpretation = "Possible";
@@ -380,7 +380,7 @@ function drugsProcess(){
         }
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking Oxymorphone, highly unlikely Oxycodone test and Opiates test would be negative.";
+        explanation = "Patient taking <b>Oxymorphone</b>, highly unlikely Oxycodone test and Opiates test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
