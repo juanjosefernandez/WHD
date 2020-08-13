@@ -351,7 +351,7 @@ function drugsProcess(){
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Oxycodone"){
-        drugName = "<b>Oxyconde</b>"; YOU ARE HERE
+        drugName = "<b>Oxyconde</b>";
         testRecommended = "Oxycodone is the appropriate test.";
         if (oxycodoneTestResult=="Positive"){
             interpretation = "Expected";
