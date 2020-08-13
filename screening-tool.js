@@ -15,7 +15,7 @@ function toggleDrug(clicked_id){
 
     if(document.getElementById(clicked_id).value == false || document.getElementById(clicked_id).value == undefined ){
         document.getElementById(clicked_id).value = true;
-        document.getElementById(clicked_id).style.backgroundColor = "#14df4d";
+        document.getElementById(clicked_id).style.backgroundColor = "#add9ba";
         // change style so that it is pressed // make RED for test
     }
     else {
@@ -29,13 +29,13 @@ function addTestResult(clicked_id){
     if(clicked_id=="opiatesTestNegative"||clicked_id=="opiatesTestPositive"){
     if(clicked_id=="opiatesTestNegative"){
         document.getElementById(clicked_id).value = true;
-        document.getElementById(clicked_id).style.backgroundColor = "#14df4d";
+        document.getElementById(clicked_id).style.backgroundColor = "#add9ba";
         document.getElementById("opiatesTestPositive").value = false;
         document.getElementById("opiatesTestPositive").style.backgroundColor = "#77C1E4";
     }
     else {
         document.getElementById(clicked_id).value = true;
-        document.getElementById(clicked_id).style.backgroundColor = "#14df4d";
+        document.getElementById(clicked_id).style.backgroundColor = "#add9ba";
         document.getElementById("opiatesTestNegative").value = false; 
         document.getElementById("opiatesTestNegative").style.backgroundColor = "#77C1E4";
     }
@@ -43,13 +43,13 @@ function addTestResult(clicked_id){
     else{
     if(clicked_id=="oxycodoneTestNegative"){
         document.getElementById(clicked_id).value = true;
-        document.getElementById(clicked_id).style.backgroundColor = "#14df4d";
+        document.getElementById(clicked_id).style.backgroundColor = "#add9ba";
         document.getElementById("oxycodoneTestPositive").value = false;
         document.getElementById("oxycodoneTestPositive").style.backgroundColor = "#77C1E4";
     }
     else {
         document.getElementById(clicked_id).value = true;
-        document.getElementById(clicked_id).style.backgroundColor = "#14df4d";
+        document.getElementById(clicked_id).style.backgroundColor = "#add9ba";
         document.getElementById("oxycodoneTestNegative").value = false;
         document.getElementById("oxycodoneTestNegative").style.backgroundColor = "#77C1E4";
     }
