@@ -386,7 +386,7 @@ function drugsProcess(){
     }
     
     // add to output
-    output = output + `<div class="text-block-34">${drugName}</div>
+    output = output + `<div class="text-block-34 shaded">${drugName}</div>
         <div class="text-block-34 shaded">${testRecommended}</div>
         <div class="text-block-34 shaded">${interpretation}</div>
         <div class="text-block-34 shaded">${explanation}</div>
