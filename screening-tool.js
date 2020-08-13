@@ -96,16 +96,16 @@ function opiatesTestProcess(){
             // build string
             var opiates = ""
             if(drugs.includes("Codeine")){
-            opiates = opiates + "Codeine, ";
+            opiates = opiates + "<b>Codeine</b>, ";
             }
             if(drugs.includes("Morphine")){
-            opiates = opiates + "Morphine, ";
+            opiates = opiates + "<b>Morphine</b>, ";
             }
             if (opiates.length>0){
             opiatesTestExplanation = `Patient prescribed or using ${opiates}highly likely that Opiate test would be positive. `;
             }
             if(drugs.includes("Heroin-mam6")){
-            opiatesTestExplanation = opiatesTestExplanation + "Patient using heroin, highly unlikely that Opiate test would be positive.";
+            opiatesTestExplanation = opiatesTestExplanation + "Patient using <b>Heroin</b>, highly unlikely that Opiate test would be positive.";
             }
         }
         else{
@@ -113,26 +113,26 @@ function opiatesTestProcess(){
             // build string
             var nonOpiates = "";
             if (drugs.includes("Hydromorphone")){
-            nonOpiates = nonOpiates + "Hydromorphone"
+            nonOpiates = nonOpiates + "<b>Hydromorphone</b>"
             }
             if (drugs.includes("Hydrocodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonOpiates = nonOpiates + "Hydrocodone"
+            nonOpiates = nonOpiates + "<b>Hydrocodone</b>"
             }
             if (drugs.includes("Oxycodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonOpiates = nonOpiates + "Oxycodone"
+            nonOpiates = nonOpiates + "<b>Oxycodone</b>"
             }
             opiatesTestExplanation = `High dose or recent ${nonOpiates}, this can give a positive Opiates Test.`;
         }
         }
         else {
         opiatesTestInterpretation = "Unexpected";
-        opiatesTestExplanation = "Patient not prescribed Codeine, Morphine, Oxycodone, Hydromorphone or Hydromorphone nor using Heroin, so highly unlikely UDT would be positive.";
+        opiatesTestExplanation = "Patient not prescribed <b>Codeine</b>, <b>Morphine</b>, <b>Oxycodone</b>, <b>Hydromorphone</b> or <b>Hydromorphone</b> nor using <b>Heroin</b>, so highly unlikely UDT would be positive.";
         }
     }
     else if (opiatesTestResult == "Negative"){
@@ -142,17 +142,17 @@ function opiatesTestProcess(){
             opiatesTestInterpretation = "Unexpected";
             // build string
             var opiates = ""
-            if(drugs.includes("Codeine")){
+            if(drugs.includes("<b>Codeine</b>")){
             opiates = opiates + "Codeine, ";
             }
-            if(drugs.includes("Morphine")){
+            if(drugs.includes("<b>Morphine</b>")){
             opiates = opiates + "Morphine, ";
             }
             if (opiates.length>0){
             opiatesTestExplanation = `Patient prescribed or using ${opiates}highly unlikely that Opiate test would be negative. `;
             }
             if(drugs.includes("Heroin-mam6")){
-            opiatesTestExplanation = opiatesTestExplanation + "Patient using heroin, highly unlikely that Opiate test would be negative.";
+            opiatesTestExplanation = opiatesTestExplanation + "Patient using <b>Heroin</b>, highly unlikely that Opiate test would be negative.";
             }
         }
         else{
@@ -160,26 +160,26 @@ function opiatesTestProcess(){
             // build string
             var nonOpiates = "";
             if (drugs.includes("Hydromorphone")){
-                nonOpiates = nonOpiates + "Hydromorphone"
+                nonOpiates = nonOpiates + "<b>Hydromorphone</b>"
             }
             if (drugs.includes("Hydrocodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonOpiates = nonOpiates + "Hydrocodone"
+            nonOpiates = nonOpiates + "<b>Hydrocodone</b>"
             }
             if (drugs.includes("Oxycodone")){
             if (nonOpiates.length > 0){
                 nonOpiates+= ", ";
             }
-            nonOpiates = nonOpiates + "Oxycodone"
+            nonOpiates = nonOpiates + "<b>Oxycodone</b>"
             }
             opiatesTestExplanation = `Low dose or distant dosing of ${nonOpiates}, this can give a negative Opiates Test.`;
         }
         }
         else {
         opiatesTestInterpretation = "Expected";
-        opiatesTestExplanation = "Patient not prescribed Codeine, Morphine, Oxycodone, Hydromorphone or Hydromorphone nor using Heroin,  highly likely UDT would be negative.";
+        opiatesTestExplanation = "Patient not prescribed <b>Codeine</b>, <b>Morphine</b>, <b>Oxycodone</b>, <b>Hydromorphone</b> or <b>Hydromorphone</b> nor using <b>Heroin</b>,  highly likely UDT would be negative.";
         }
     }
     
@@ -196,29 +196,29 @@ function oxycodoneTestProcess(){
     if (oxycodoneTestResult == "Positive"){
         if(drugs.includes("Oxycodone") || drugs.includes("Oxymorphone")){
             oxycodoneTestInterpretation = "Expected";
-            oxycodoneTestExplanation = "Patient prescribed Oxycodone and/or Oxymorphone, highly likely that Oxycodone test would be positive.";
+            oxycodoneTestExplanation = "Patient prescribed <b>Oxycodone</b> and/or <b>Oxymorphone</b>, highly likely that Oxycodone test would be positive.";
         }
         else if(drugs.includes("Hydrocodone") || drugs.includes("Hydromorphone")){
             oxycodoneTestInterpretation = "Possible";  
-            oxycodoneTestExplanation = "Patient prescribed Hydrocodone and/or Hydromorphone, possible that Oxycodone test would be positive from back metabolism of Hydrocodone to Oxycodone or of Hydromorphone to Oxymorphone.";
+            oxycodoneTestExplanation = "Patient prescribed <b>Hydrocodone</b> and/or <b>Hydromorphone</b>, possible that Oxycodone test would be positive from back metabolism of <b>Hydrocodone</b> to <b>Oxycodone</b> or of <b>Hydromorphone</b> to <b>Oxymorphone</b>.";
         }
         else {
         oxycodoneTestInterpretation = "Unexpected";
-        oxycodoneTestExplanation = "Patient NOT prescribed Oxycodone or Oxymorphone, highly unlikely that Oxycodone test would be positive.";
+        oxycodoneTestExplanation = "Patient NOT prescribed <b>Oxycodone</b> or <b>Oxymorphone</b>, highly unlikely that Oxycodone test would be positive.";
         }
     }
     else if (oxycodoneTestResult == "Negative"){
     if(drugs.includes("Oxycodone") || drugs.includes("Oxymorphone")){
         oxycodoneTestInterpretation = "Unexpected";
-        oxycodoneTestExplanation = "Patient prescribed Oxycodone and/or Oxymorphone, highly unlikely that Oxycodone test would be negative.";
+        oxycodoneTestExplanation = "Patient prescribed <b>Oxycodone</b> and/or <b>Oxymorphone</b>, highly unlikely that Oxycodone test would be negative.";
     }
     else if(drugs.includes("Hydrocodone") || drugs.includes("Hydromorphone")){
         oxycodoneTestInterpretation = "Possible";  
-        oxycodoneTestExplanation = "Patient prescribed Hydrocodone and/or Hydromorphone, possible that Oxycodone test would be negative. Low or distant Hydrocodone/Hydromorphone dosing can give a negative Oxycodone Test, however the test could also be positive from back metabolism of hydrocodone to Oxycodone.";
+        oxycodoneTestExplanation = "Patient prescribed <b>Hydrocodone</b> and/or <b>Hydromorphone</b>, possible that Oxycodone test would be negative. Low or distant Hydrocodone/Hydromorphone dosing can give a negative Oxycodone Test, however the test could also be positive from back metabolism of hydrocodone to Oxycodone.";
     }
     else {
         oxycodoneTestInterpretation = "Expected";
-        oxycodoneTestExplanation = "Patient not prescribed Oxycodone or Oxymorphone, highly likely that Oxycodone test would be negative.";
+        oxycodoneTestExplanation = "Patient not prescribed <b>Oxycodone</b> or <b>Oxymorphone</b>, highly likely that Oxycodone test would be negative.";
     }
 
     }
@@ -237,8 +237,8 @@ function drugsProcess(){
 
     // if drugs[index] == "drugName" do something
     if (drugs[index]=="Buprenorphine"){
-        drugName = drugs[index];
-        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Buprenorphine.";
+        drugName = "<b>Buprenorphine</b>";
+        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for <b>Buprenorphine</b>.";
         if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
             interpretation = "Unexpected";
         }
@@ -246,124 +246,124 @@ function drugsProcess(){
             interpretation = "Unexpected";
         }
 //         interpretation = "Unexpected";
-        explanation = "Cannot determine if patient is or is not taking Buprenorphine, Buprenorphine not detected by Opiates or Oxycodone screening tests.";
+        explanation = "Cannot determine if patient is or is not taking <b>Buprenorphine</b>, <b>Buprenorphine</b> not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Codeine"){
-        drugName = drugs[index];
+        drugName = "<b>Codeine</b>";
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Expected";
-        explanation = "Patient taking Codeine, highly likely that Opiate test would be positive.";
+        explanation = "Patient taking <b>Codeine</b>, highly likely that Opiates test would be positive.";
         } 
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking Codeine, highly unlikely that Opiate test would be negative.";
+        explanation = "Patient taking <b>Codeine</b>, highly unlikely that Opiates test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Fentanyl"){
-        drugName = drugs[index];
-        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Fentanyl.";
+        drugName = "<b>Fentanyl</b>";
+        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for <b>Fentanyl</b>.";
         if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
             interpretation = "Unexpected";
         }
         else {
             interpretation = "Unexpected";
         }
-        explanation = "Cannot determine if patient is or is not taking Fentanyl, Fentanyl not detected by Opiates or Oxycodone screening tests.";
+        explanation = "Cannot determine if patient is or is not taking <b>Fentanyl</b>, <b>Fentanyl</b> not detected by Opiates or Oxycodone screening tests.";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Hydrocodone"){
-        drugName = drugs[index];
+        drugName = "<b>Hydrocodone</b>";
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive" || oxycodoneTestResult=="Positive"){
         interpretation = "Possible";
-        explanation = "High dose or recent Hydrocodone can result in a positive Opiates Test and/or Oxycodone Test. However, low or distant Hydrocodone dosing can result in a negative Opiates Test and/or Oxycodone Test.";
+        explanation = "High dose or recent <b>Hydrocodone</b> can result in a positive Opiates Test and/or Oxycodone Test. However, low or distant <b>Hydrocodone</b> dosing can result in a negative Opiates Test and/or Oxycodone Test.";
         } 
         else{
         interpretation = "Possible";
-        explanation = "Low dose or distant Hydrocodone can result in a negative Opiates Test and/or Oxycodone Test. However, a high or recent Hydrocodone dosing can result in a positive Opiates Test and/or Oxycodone Test.";
+        explanation = "Low dose or distant <b>Hydrocodone</b> can result in a negative Opiates Test and/or Oxycodone Test. However, a high or recent <b>Hydrocodone</b> dosing can result in a positive Opiates Test and/or Oxycodone Test.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Hydromorphone"){
-        drugName = drugs[index];
+        drugName = "<b>Hydromorphone</b>";
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive" || oxycodoneTestResult=="Positive"){
         interpretation = "Possible";
-        explanation = "High dose or recent Hydromorphone can result in a positive Opiates Test and/or Oxycodone Test. However, low or distant Hydromorphone dosing can result in a negative Opiates Test and/or Oxycodone Test.";
+        explanation = "High dose or recent <b>Hydromorphone</b> can result in a positive Opiates Test and/or Oxycodone Test. However, low or distant <b>Hydromorphone</b> dosing can result in a negative Opiates Test and/or Oxycodone Test.";
         } 
         else{
         interpretation = "Possible";
-        explanation = "Low dose or distant Hydromorphone can result in a negative Opiates Test and/or Oxycodone Test. However, a high or recent Hydromorphone dosing can result in a positive Opiates Test and/or Oxycodone Test.";
+        explanation = "Low dose or distant <b>Hydromorphone</b> can result in a negative Opiates Test and/or Oxycodone Test. However, a high or recent <b>Hydromorphone</b> dosing can result in a positive Opiates Test and/or Oxycodone Test.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Heroin-mam6"){
-        drugName = "Heroin";
+        drugName = "<b>Heroin</b>";
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Expected";
-        explanation = "Patient taking heroin, highly likely that Opiate test would be positive.";
+        explanation = "Patient taking <b>Heroin</b>, highly likely that Opiate test would be positive.";
         } 
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking heroin, highly unlikely that Opiate test would be negative.";
+        explanation = "Patient taking <b>Heroin</b>, highly unlikely that Opiate test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Meperidine"){
-        drugName = drugs[index];
-        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Meperidine.";
+        drugName = "<b>Meperidine</b>";
+        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for <b>Meperidine</b>.";
         if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
             interpretation = "Unexpected";
         }
         else {
             interpretation = "Unexpected";
         }
-        explanation = "Cannot determine if patient is or is not taking Meperidine, Meperidine not detected by Opiates or Oxycodone screening tests";
+        explanation = "Cannot determine if patient is or is not taking <b>Meperidine</b>, Meperidine not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Methadone"){
-        drugName = drugs[index];
-        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for Methadone.";
+        drugName = "<b>Methadone</b>";
+        testRecommended = "Opiates or Oxycodone screening test not appropriate for testing, consider confirmatory testing for <b>Methadone</b>.";
         if ((opiatesTestResult=="Negative")&&(oxycodoneTestResult=="Negative")){
             interpretation = "Unexpected";
         }
         else {
             interpretation = "Unexpected";
         }
-        explanation = "Cannot determine if patient is or is not taking Methadone, Methadone not detected by Opiates or Oxycodone screening tests";
+        explanation = "Cannot determine if patient is or is not taking <b>Methadone</b>, Methadone not detected by Opiates or Oxycodone screening tests";
         falsePositives = "N/A";
     }
     if (drugs[index]=="Morphine"){
-        drugName = drugs[index];
+        drugName = "<b>Morphine</b>";
         testRecommended = "Opiates is appropriate test.";
         if (opiatesTestResult=="Positive"){
         interpretation = "Expected";
-        explanation = "Patient taking morphine, highly likely that Opiate test would be positive.";
+        explanation = "Patient taking <b>Morphine</b>, highly likely that Opiate test would be positive.";
         } 
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking morphine, highly unlikely that Opiate test would be negative.";
+        explanation = "Patient taking <b>Morphine</b>, highly unlikely that Opiate test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Oxycodone"){
-        drugName = drugs[index];
+        drugName = "<b>Oxyconde</b>"; YOU ARE HERE
         testRecommended = "Oxycodone is the appropriate test.";
         if (oxycodoneTestResult=="Positive"){
             interpretation = "Expected";
-            explanation = "Patient taking Oxycodone, highly likely Oxycodone test and/or Opiates test would be positive.\nPossible high dose or recent Oxycodone can also give a positive Opiates Test.";
+            explanation = "Patient taking <b>Oxycodone</b>, highly likely Oxycodone test and/or Opiates test would be positive.\nPossible high dose or recent <b>Oxycodone</b> can also give a positive Opiates Test.";
         } 
         else if(opiatesTestResult=="Positive"){
             interpretation = "Possible";
-            explanation = "Possible high dose or recent Oxycodone can give a positive Opiates Test."; 
+            explanation = "Possible high dose or recent <b>Oxycodone</b> can give a positive Opiates Test."; 
         }
         else{
         interpretation = "Unexpected";
-        explanation = "Patient taking Oxycodone, highly unlikely Oxycodone test and Opiates test would be negative.";
+        explanation = "Patient taking <b>Oxycodone</b>, highly unlikely Oxycodone test and Opiates test would be negative.";
         }
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
@@ -376,7 +376,7 @@ function drugsProcess(){
         } 
         else if(opiatesTestResult=="Positive"){
             interpretation = "Possible";
-            explanation = "Possible high dose or recent Oxymorphone can give a positive Opiates Test."; 
+            explanation = "Possible high dose or recent <b>Oxymorphone</b> can give a positive Opiates Test."; 
         }
         else{
         interpretation = "Unexpected";
