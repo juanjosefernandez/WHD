@@ -351,7 +351,7 @@ function drugsProcess(){
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Oxycodone"){
-        drugName = "<b>Oxyconde</b>";
+        drugName = "<b>Oxycodone</b>";
         testRecommended = "Oxycodone is the appropriate test.";
         if (oxycodoneTestResult=="Positive"){
             interpretation = "Expected";
@@ -368,7 +368,7 @@ function drugsProcess(){
         falsePositives = ">3 Poppy seed bagels, naloxone, dextromethorophan; dipnehydramine; fluoroquinolones; quinine, rifampin";
     }
     if (drugs[index]=="Oxymorphone"){
-        drugName = drugs[index];
+        drugName = "<b>Oxymorphone</b>";
         testRecommended = "Oxycodone is the appropriate test.";
         if (oxycodoneTestResult=="Positive"){
             interpretation = "Expected";
