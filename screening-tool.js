@@ -142,11 +142,11 @@ function opiatesTestProcess(){
             opiatesTestInterpretation = "Unexpected";
             // build string
             var opiates = ""
-            if(drugs.includes("<b>CODEINE</b>")){
-            opiates = opiates + "Codeine, ";
+            if(drugs.includes("Codeine")){
+            opiates = opiates + "<b>CODEINE</b>, ";
             }
-            if(drugs.includes("<b>MORPHINE</b>")){
-            opiates = opiates + "Morphine, ";
+            if(drugs.includes("Morphine")){
+            opiates = opiates + "<b>MORPHINE</b>, ";
             }
             if (opiates.length>0){
             opiatesTestExplanation = `Patient prescribed or using ${opiates}highly unlikely that Opiate test would be negative. `;
