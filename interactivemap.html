@@ -141,6 +141,7 @@ aria-selected="true" role="button" tabindex="0"></div>
 <script>
     function select(){
         console.log("click");
+	slider.goto( 2 );
     }
 </script>
     
@@ -574,8 +575,6 @@ aria-selected="true" role="button" tabindex="0"></div>
          cy="-185.375"
          cx="611.875"
          id="milwaukee"
-
-         aria-label="Show slide 9 of 13" 
-         role="button" 
+	 onclick="select()"
          />
     </svg>
