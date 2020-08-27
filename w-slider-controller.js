@@ -6,7 +6,7 @@
  *   var slider = new W_SLIDER_CONTROLLER( '#element_id' );
  *   slider.setup('drag_disabled') // removes the drag-and-slide interaction
  *   slider.goto( 2 ); // jumps to the second slide
- */
+ */ 
 var W_SLIDER_CONTROLLER = function( el ){
 	// force it to instance
 	// http://jsfiddle.net/vXbLL/
@@ -32,15 +32,15 @@ var W_SLIDER_CONTROLLER = function( el ){
 	return this;
 };
 
-/**
+ /*
  * @method count
  * @return {Number}		Qty of slides
- */
+ */ 
 W_SLIDER_CONTROLLER.prototype.count = function(){
 	return this.$slides.length;
 }
 
-/**
+/*
  * @method current
  * @return {Number}			Current index [begins at 1]
  */
@@ -48,7 +48,7 @@ W_SLIDER_CONTROLLER.prototype.current = function(){
 	return this.$nav.filter('.w-active').index() + 1
 }
 
-/**
+/*
  * Jumps to the pervious slider (cyclic)
  *
  * @method prev
@@ -63,11 +63,11 @@ W_SLIDER_CONTROLLER.prototype.prev = function(){
 	this.goto( tgt );
 };
 
-/**
+/*
 * Jumps to the next slider (cyclic)
 *
 * @method prev
-*/
+*/ 
 W_SLIDER_CONTROLLER.prototype.next = function(){
 	var tgt = this.current();
 	if(tgt > this.count())
@@ -78,7 +78,7 @@ W_SLIDER_CONTROLLER.prototype.next = function(){
 	this.goto( tgt );
 };
 
-/**
+/*
 * Jumps to the specified slider
 *
 * Triggers W_BEFORE_SLIDE and W_ON_SLIDE for futher interactions
@@ -94,7 +94,7 @@ W_SLIDER_CONTROLLER.prototype.goto = function( index ){
 	$(this.$el).trigger('W_ON_SLIDE');
 };
 
-/**
+/*
  * Allows to configure the slider features
  *
  * @method setup
