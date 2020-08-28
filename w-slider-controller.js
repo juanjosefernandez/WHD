@@ -1,4 +1,4 @@
-/**
+ /**
  * Extends Webflow Slider with public methods to swich between slides
  *
  * Paste this code on the Custom Code panel to get started:
@@ -117,4 +117,4 @@ W_SLIDER_CONTROLLER.prototype.setup = function(action){
 			});
 		break;
 	}
-};
+};  
