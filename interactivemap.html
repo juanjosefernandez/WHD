@@ -11,6 +11,12 @@
     }
 </style>
 
+<script>
+	function select(number){
+		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
+		slider.goto( number ); // jumps to the NUMBER slide
+	}
+</script>
 
     
     <svg
@@ -443,6 +449,6 @@
          cy="-185.375"
          cx="611.875"
          id="milwaukee"
-	 onclick="select()"
+	 onclick="select(3)"
          />
     </svg>
