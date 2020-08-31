@@ -1,18 +1,22 @@
-<style>
+<style>	
     circle:hover {
         fill: #22aa22;
     }
-
+	
     circle {
         transition: .6s fill;
         fill:#f39203;
         fill-opacity:1;
         stroke-width:0.601657;
     }
+	
+	circle.selected {
+		fill: #FF5733
+	}
 </style>
 
 <script>
-	function select(number){
+	function select(param, number){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
 		
@@ -40,6 +44,8 @@
 		// give that dot the SELECTED class
 			// Increase Selected Dot and change color using setAttribute and .style.color = "red"
 		
+		// give the dot you just clicked the selected class
+		document.getElementById(param.id).className += "selected";
 		console.log("out");
 
 	}
@@ -476,6 +482,6 @@
          cy="-185.375"
          cx="611.875"
          id="milwaukee"
-	 onclick="select(4)"
+	 	onclick="select(this, 4)"
          />
     </svg>
