@@ -16,7 +16,7 @@
 </style>
 
 <script>
-	function select(param, number){
+	function select(id, number){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
 		
@@ -45,7 +45,7 @@
 			// Increase Selected Dot and change color using setAttribute and .style.color = "red"
 		
 		// give the dot you just clicked the selected class
-		document.getElementById(param.id).className += "selected";
+		document.getElementById(id).className += "selected";
 		console.log("out");
 
 	}
@@ -374,7 +374,7 @@
          cy="-209.43506"
          cx="618.07611"
          id="chicago"
-         onclick="select(5)"
+         onclick="select('chicago',5)"
         />
       <circle
          r="4"
@@ -383,7 +383,7 @@
          cy="-214.11873"
          transform="scale(1,-1)"
          inkscape:label="#gary" 
-         onclick="select(6)"
+         onclick="select('gary',6)"
          />
       <circle
          r="4"
@@ -392,7 +392,7 @@
          cy="-259.61499"
          cx="646.84528"
          id="indianapolis" 
-         onclick="select(7)"
+         onclick="select('indianapolis',7)"
          />
       <circle
          r="4"
@@ -401,7 +401,7 @@
          cy="-304.25"
          transform="scale(1,-1)"
          inkscape:label="#wichita" 
-         onclick="select(0)"
+         onclick="select('wichita',0)"
          />
       <circle
          id="detroit"
@@ -410,7 +410,7 @@
          transform="scale(1,-1)"
          inkscape:label="#detroit"
          r="4" 
-         onclick="select(8)"
+         onclick="select('detroit',8)"
          />
       <circle
          r="4"
@@ -419,7 +419,7 @@
          cy="-148.84598"
          cx="525.02679"
          id="minneapolis" 
-         onclick="select(2)"
+         onclick="select('minneapolis',2)"
          />
       <circle
          id="kansas-city"
@@ -428,7 +428,7 @@
          transform="scale(1,-1)"
          inkscape:label="#kansas-city"
          r="4" 
-         onclick="select(1)"
+         onclick="select('kansas-city',1)"
          />
       <circle
          r="4"
@@ -437,7 +437,7 @@
          cy="-284.56628"
          cx="580.22534"
          id="st-louis" 
-         onclick="select(3)"
+         onclick="select('st-louis',3)"
          />
       <circle
          id="cleveland"
@@ -446,7 +446,7 @@
          transform="scale(1,-1)"
          inkscape:label="#cleveland"
          r="4" 
-         onclick="select(10)"
+         onclick="select('cleveland',10)"
          />
       <circle
          r="4"
@@ -455,7 +455,7 @@
          cy="-207.5"
          cx="717.75"
          id="canton-7" 
-         onclick="select(11)"
+         onclick="select('canton',11)"
          />
       <circle
          r="4"
@@ -464,7 +464,7 @@
          cy="-247.875"
          cx="703.25"
          id="columbus" 
-         onclick="select(9)"
+         onclick="select('columbus',9)"
          />
       <circle
          id="pittsburgh"
@@ -473,7 +473,7 @@
          transform="scale(1,-1)"
          inkscape:label="#pittsburgh"
          r="4" 
-         onclick="select(12)"
+         onclick="select("pittsburgh", 12)"
          />
       <circle
          r="4"
@@ -482,6 +482,6 @@
          cy="-185.375"
          cx="611.875"
          id="milwaukee"
-	 	onclick="select(this, 4)"
+	 	onclick="select('milwaukee', 4)"
          />
     </svg>
