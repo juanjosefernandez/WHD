@@ -15,6 +15,11 @@
 	function select(number){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
+		
+		// Make the map dot large
+		console.log(this.id);
+		document.getelementbyid(this.id).r = "10";
+		// These lines of codes are experimental
 	}
 </script>
 
