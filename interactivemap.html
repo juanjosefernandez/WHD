@@ -12,13 +12,13 @@
 </style>
 
 <script>
-	function select(number){
+	function select(number, id){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
 		
 		// Make the map dot large
-		console.log(this.id);
-		document.getElementById(this.id).r = "10";
+		console.log(id);
+		document.getElementById(id).r = "10";
 		// These lines of codes are experimental
 	}
 </script>
@@ -454,6 +454,6 @@
          cy="-185.375"
          cx="611.875"
          id="milwaukee"
-	 onclick="select(4)"
+	 onclick="select(4, this.id)"
          />
     </svg>
