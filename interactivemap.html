@@ -16,9 +16,10 @@
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
 		
-		//make detroit bigger
+		//make detroit bigger (this doesn't get undone)
 		document.getElementById('detroit').setAttribute("r", "10");
 		
+		//test
 		console.log("Is slide 1 hidden?");
 		console.log(document.getElementById('slide-1').hidden);
 	}
