@@ -25,7 +25,7 @@
 	}
 		
 	// Whenever a new dot is selected	
-	function updateDotSizes(currentSlide){
+	function updateDotSizes(currentSlide, previousSlide){
 		console.log("Update Dot Sizes");
 		console.log("currentSlide: " + currentSlide);
 		//Reset Dots
@@ -38,8 +38,9 @@
 			// Increase Selected Dot and change color using setAttribute and .style.color = "red"
 		
 		// give the dot you just clicked the selected class
-		document.getElementById(currentSlide).setAttribute("r", "10");
-		document.getElementById(currentSlide).setAttribute("fill", "#FF5733");
+		document.getElementById(currentSlide).setAttribute("r", "4");
+		document.getElementById(currentSlide).setAttribute("r", "15");
+		document.getElementById(currentSlide).style.color = "red";
 		console.log("done");
 	}
 	
@@ -100,7 +101,7 @@
 		// do your thang
 		  console.log(data.index);
 		  currentSlide = translateSlideInfo(data.index);
-		  updateDotSizes(currentSlide);
+		  updateDotSizes(currentSlide, previousSlide);
 		});
 
 	});
