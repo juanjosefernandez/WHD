@@ -16,6 +16,7 @@
 </style>
 
 <script>
+	// Controlling the slider via the map
 	function select(id, number){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
 		slider.goto( number ); // jumps to the NUMBER slide
@@ -52,6 +53,7 @@
 </script>
 
 <script>
+	// Event listener
 	var Webflow = Webflow || [];
 	Webflow.push(function () {
 	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
