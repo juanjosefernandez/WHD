@@ -24,27 +24,15 @@
 		//document.getElementById('detroit').setAttribute("r", "10");
 	}
 		
-	// Whenever a new dot is selected	
+	// Updates dot sizes based on current and previous slide information	
 	function updateDotSizes(currentSlide, previousSlide){
-		console.log("Update Dot Sizes");
-		console.log("previousSlide: " + previousSlide);
-		console.log("currentSlide: " + currentSlide);
-		//Reset Dots
-			// find the dot with the SELECTED class
-			// set its attribute r to 4
-			// set its style to
-			// remove SELECTED from its class
-		// Figure out which dot is now the selected dot based on the aria-label query
-		// give that dot the SELECTED class
-			// Increase Selected Dot and change color using setAttribute and .style.color = "red"
-		
-		// give the dot you just clicked the selected class
+		// resets previous dot
 		document.getElementById(previousSlide).setAttribute("r", "4");
+		// modifies current dot in
 		document.getElementById(currentSlide).setAttribute("r", "15");
-		document.getElementById(currentSlide).style.color = "red";
-		console.log("done");
 	}
 	
+	// translates ids from the slide event to city names which are used as ids for the dots in the map
 	function translateSlideInfo(id){
 		let city;
 		switch ( id ) {
@@ -100,7 +88,6 @@
 	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
 	  $(document).on('slider-event', '.w-slider', function(e, data) {
 		// do your thang
-		  console.log(data.index);
 		  previousSlide = currentSlide;
 		  currentSlide = translateSlideInfo(data.index);
 		  updateDotSizes(currentSlide, previousSlide);
