@@ -13,8 +13,8 @@
 </style>
 
 <script>
-	let currentSlide;
-	let previousSlide = 'wichita';
+	let currentSlide = 'wichita';
+	let previousSlide;
 	// Controlling the slider via the map
 	function select(id, number){
 		var slider = new W_SLIDER_CONTROLLER( '#home-slider' );
@@ -27,6 +27,7 @@
 	// Whenever a new dot is selected	
 	function updateDotSizes(currentSlide, previousSlide){
 		console.log("Update Dot Sizes");
+		console.log("previousSlide: " + previousSlide);
 		console.log("currentSlide: " + currentSlide);
 		//Reset Dots
 			// find the dot with the SELECTED class
@@ -100,6 +101,7 @@
 	  $(document).on('slider-event', '.w-slider', function(e, data) {
 		// do your thang
 		  console.log(data.index);
+		  previousSlide = currentSlide;
 		  currentSlide = translateSlideInfo(data.index);
 		  updateDotSizes(currentSlide, previousSlide);
 		});
