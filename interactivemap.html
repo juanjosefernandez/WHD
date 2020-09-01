@@ -59,7 +59,7 @@
 	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
 	  $(document).on('slider-event', '.w-slider', function(e, data) {
 		// do your thang
-		  console.log("hello!");
+		  console.log(data.index);
 		});
 
 	  // OR - listen for events from a specific subset of sliders
