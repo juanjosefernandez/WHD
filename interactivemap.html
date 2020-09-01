@@ -51,6 +51,22 @@
 	}
 </script>
 
+<script>
+	var Webflow = Webflow || [];
+	Webflow.push(function () {
+	  // listen for all sliders on the page - .w-slider is Webflow's default class for slider components
+	  $(document).on('slider-event', '.w-slider', function(e, data) {
+		// do your thang
+		  console.log("hello!");
+		});
+
+	  // OR - listen for events from a specific subset of sliders
+// 	  $(document).on('slider-event', '.trackable-slider', function(e, data) {
+// 		// do your thang
+// 		});
+	});
+</script>
+
     
     <svg
        xmlns:dc="http://purl.org/dc/elements/1.1/"
