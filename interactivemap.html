@@ -33,8 +33,11 @@ svg{
 	function updateDotSizes(currentSlide, previousSlide){
 		// resets previous dot
 		document.getElementById(previousSlide).setAttribute("r", "4");
+		document.getElementById(previousSlide).setAttribute("fill", "#f39203"); // change color to default orange
 		// modifies current dot in
-		document.getElementById(currentSlide).setAttribute("r", "12");
+		document.getElementById(currentSlide).setAttribute("r", "12"); // change color to light orange
+		document.getElementById(previousSlide).setAttribute("fill", "#facb66"); // change color to light orange
+
 	}
 	
 	// translates ids from the slide event to city names which are used as ids for the dots in the map
